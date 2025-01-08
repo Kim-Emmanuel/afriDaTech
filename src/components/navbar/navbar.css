@@ -1,0 +1,442 @@
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  width: 100%;
+  max-width: 1536px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  /* Lowered z-index */
+}
+
+.hidden {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.container {
+  max-width: 1536px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0 15px;
+    /* Adjust padding for smaller screens */
+  }
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  /* Position the logo */
+  top: 60px;
+  /* Space from the top */
+  left: 60px;
+  /* Space from the left */
+  z-index: 101;
+  background-color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.logo-image {
+  width: 160px;
+  height: auto;
+}
+
+.menu-icon {
+  width: 122px;
+  height: 96px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  /* Position the menu icon */
+  top: 60px;
+  /* Space from the top */
+  right: 60px;
+  /* Space from the right */
+  z-index: 101;
+  padding: 10px;
+  border-radius: 19px;
+  background-color: rgba(255, 255, 255, 0.4);
+  /* Semi-transparent white background */
+  backdrop-filter: blur(5px);
+}
+
+.menu-icon span {
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: black;
+}
+
+.menu-icon.open {
+  background: none;
+  margin-top: 0;
+}
+
+.bar {
+  width: 80px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* Ensure it covers the entire viewport height */
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu List Styles */
+.menu-overlay ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Space between menu items */
+  list-style: none;
+  padding: 0;
+}
+
+/* Menu Item Styles */
+.menu-items {
+  font-size: 1.3rem;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Highlight on Hover */
+.menu-items a::before {
+  content: attr(data-number);
+  position: absolute;
+  left: -40px;
+  /* Adjust as needed */
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-items a:hover {
+  color: #0186ff;
+  /* Change color on hover */
+  transform: translateX(10px);
+  /* Smooth transition */
+}
+
+/* Highlight Current Item */
+.menu-items .current {
+  font-weight: bold;
+  color: #000;
+}
+
+.menu-items .current::before {
+  color: #000;
+}
+
+/* Media query for smaller screens  */
+@media (max-width: 768px) {
+  .menu-items {
+    font-size: 1.1rem;
+    /* Adjust font size as needed */
+  }
+
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+/* Mobile Devices - Portrait and Landscape */
+@media (min-width: 240px) and (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  section {
+    padding: 10px;
+  }
+}
+
+/* Small Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
+
+/* Tablets and Small Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+
+/* Medium to Large Laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  section {
+    padding: 25px;
+  }
+}
+
+/* Large Screens and Desktops */
+@media (min-width: 1281px) and (max-width: 1536px) {
+  .container {
+    max-width: 1536px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  section {
+    padding: 30px;
+  }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1537px) {
+  .container {
+    max-width: 1536px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  section {
+    padding: 40px;
+  }
+}
+
+/* Media query for smaller screens */
+@media (min-width: 240px) and (max-width: 480px) {
+  .menu-icon {
+    padding: 5px;
+    gap: 15px;
+    top: 40px;
+    /* Adjusted for smaller screens */
+    right: 25px;
+    /* Adjusted for smaller screens */
+    width: 80px;
+    height: 75px;
+  }
+
+  .bar {
+    width: 45px;
+    height: 2px;
+  }
+
+  .logo {
+    top: 40px;
+    /* Adjusted for smaller screens */
+    left: 25px;
+    /* Adjusted for smaller screens */
+  }
+
+  .logo-image {
+    width: 80px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .menu-icon {
+    padding: 8px;
+    gap: 15px;
+    top: 50px;
+    /* Adjusted for smaller screens */
+    right: 32px;
+    /* Adjusted for smaller screens */
+    width: 90px;
+    height: 75px;
+  }
+
+  .bar {
+    width: 45px;
+    height: 2px;
+  }
+
+  .logo {
+    top: 50px;
+    /* Adjusted for smaller screens */
+    left: 32px;
+    /* Adjusted for smaller screens */
+  }
+
+  .logo-image {
+    width: 100px;
+    height: 45px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu-icon {
+    padding: 10px;
+    gap: 15px;
+    top: 60px;
+    /* Default position */
+    right: 40px;
+    /* Default position */
+  }
+
+  .bar {
+    width: 70px;
+    height: 2px;
+  }
+
+  .logo {
+    top: 60px;
+    /* Default position */
+    left: 40px;
+    /* Default position */
+  }
+
+  .logo-image {
+    width: 120px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .menu-icon {
+    padding: 12px;
+    gap: 15px;
+    top: 60px;
+    /* Default position */
+    right: 45px;
+    /* Default position */
+    height: 85px;
+    width: 125px;
+  }
+
+  .bar {
+    width: 80px;
+    height: 2px;
+  }
+
+  .logo {
+    top: 60px;
+    /* Default position */
+    left: 45px;
+    /* Default position */
+  }
+
+  .logo-image {
+    width: 160px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1536px) {
+  .menu-icon {
+    padding: 15px;
+    gap: 15px;
+    top: 70px;
+    /* Default position */
+    right: 55px;
+    /* Default position */
+    height: 90px;
+    width: 140px;
+  }
+
+  .bar {
+    width: 85px;
+    height: 2px;
+  }
+
+  .logo {
+    top: 70px;
+    /* Default position */
+    left: 55px;
+    /* Default position */
+  }
+
+  .logo-image {
+    width: 180px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1537px) {
+  .menu-icon {
+    padding: 20px;
+    gap: 15px;
+    top: 70px;
+    /* Default position */
+    right: 50px;
+    height: 100px;
+    width: 140px;
+  }
+
+  .bar {
+    width: 85px;
+    height: 2px;
+  }
+
+  .logo {
+    top: 70px;
+    /* Default position */
+    left: 95px;
+    /* Default position */
+  }
+
+  .logo-image {
+    width: 180px;
+    height: 70px;
+  }
+}

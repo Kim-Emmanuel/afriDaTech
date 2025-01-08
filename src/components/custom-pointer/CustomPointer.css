@@ -1,0 +1,44 @@
+/* CustomPointer.css */
+.custom-pointer {
+  width: 10px;
+  height: 10px;
+  background-color: #0186ff;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out;
+  z-index: 101;
+}
+
+.custom-pointer.pointer-active {
+  width: 12px;
+  height: 12px;
+  background-color: #8dc640;
+}
+
+.outer-circle {
+  width: 45px;
+  height: 45px;
+  border: 1.3px solid rgb(1, 134, 255, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0) scale(1) rotate(0deg);
+  transition: transform 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out, border-color 0.3s ease-out, opacity 0.3s ease-out, background-color 0.3s ease-out;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer-circle.pointer-active {
+  transform: translate3d(-50%, -50%, 0) scale(1.2) rotate(15deg);
+  width: 55px;
+  height: 55px;
+  border-color: #8dc640;
+}

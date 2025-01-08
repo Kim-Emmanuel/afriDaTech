@@ -1,0 +1,482 @@
+/* contact.css */
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  gap: 50px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 20px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  position: relative;
+  /* Non-static position to ensure correct scroll offset */
+}
+
+.contactFormSection {
+  flex: 2;
+  /* Increased width for larger screens */
+  display: flex;
+  justify-content: center;
+  /* Center the form horizontally */
+  align-items: center;
+  width: 100%;
+  /* Ensure the section takes full width */
+}
+
+.contactInfoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contactFormSection h2 {
+  color: #222;
+  font-size: 46px;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+
+.contactInfo a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* span {
+  color: #00cc00;
+  font-weight: bold;
+} */
+
+.contactAbout {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+}
+
+.custom-link {
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.custom-link span {
+  color: var(--accent-color);
+}
+
+.custom-link {
+  position: relative;
+}
+
+.custom-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.custom-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.custom-link span {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-link span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #007bff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.custom-link:hover span::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.img-fade {
+  animation: fadeInOut 3s infinite;
+}
+
+
+
+form {
+  width: 100%;
+  /* Ensure the form takes full width */
+  max-width: 600px;
+  /* Maximum width for the form */
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+input,
+textarea {
+  padding: 20px 12px 12px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 1rem;
+  color: #333;
+  background: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0186ff;
+  outline: none;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #555;
+  pointer-events: none;
+  transform: translateY(25px);
+  transition: all 0.3s ease;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(0);
+  font-size: 12px;
+  color: #0186ff;
+}
+
+/* Hide placeholder when input is focused */
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0;
+}
+
+/*
+
+  This media query applies styles when the viewport width is 630px or less.
+  It hides the elements with the classes .infoItem.phone, .infoItem.email, and .infoItem.business-hours by setting their display property to none.
+*/
+@media (max-width: 630px) {
+
+  .infoItem.phone,
+  .infoItem.email,
+  .infoItem.business-hours {
+    display: none;
+  }
+}
+
+.formButton {
+  background-color: #0186ff;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 32px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.formButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.formButton:active {
+  transform: translateY(0);
+}
+
+.infoItem h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.infoItem p {
+  font-size: 16px;
+  color: #555;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.separator {
+  color: #666;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.twitter {
+  color: #1da1f2;
+}
+
+.facebook {
+  color: #4267B2;
+}
+
+.social-link:hover {
+  background-color: rgb(29, 161, 242, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (min-width: 1281px) and (max-width: 1536px) {
+
+  .contactFormSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+  }
+
+  .contactInfoSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px
+  }
+
+  .contactFormSection h2 {
+    color: #222;
+    font-size: 56px;
+    line-height: 58px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .contact {
+    padding: 40px;
+  }
+
+  .contactFormSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+  }
+
+  .contactInfoSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+    gap: 60px;
+  }
+
+  .contactFormSection h2 {
+    color: #222;
+    font-size: 56px;
+    line-height: 58px;
+    margin-bottom: 10px;
+  }
+
+
+  .infoItem p {
+    font-size: 14px;
+    /* Smaller text for info section */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact {
+    padding: 30px;
+  }
+
+  .contactFormSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+  }
+
+  .contactInfoSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+    gap: 40px;
+  }
+
+  .contactFormSection h2 {
+    color: #222;
+    font-size: 46px;
+    line-height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .infoItem p {
+    font-size: 14px;
+    /* Smaller text for info section */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .formItem {
+    gap: 5px;
+  }
+
+  .contactFormSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+  }
+
+  .contactInfoSection {
+    flex: 1;
+    /* Stack on smaller screens */
+    align-items: start;
+  }
+
+  .contactFormSection h2 {
+    color: #222;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+
+  .infoItem p {
+    font-size: 12px;
+    /* Smaller text for info section */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 630px) {
+  .contact {
+    padding: 20px;
+    gap: 0;
+  }
+
+  .formItem {
+    gap: 5px;
+  }
+
+  .contactFormSection,
+  .contactInfoSection {
+    flex: 1 1 100%;
+    /* Stack on smaller screens */
+    align-items: center;
+  }
+
+  .contactFormSection h2 {
+    color: #222;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+
+  .formButton {
+    padding: 10px;
+  }
+
+  .infoItem h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .infoItem p {
+    font-size: 12px;
+    /* Smaller text for info section */
+  }
+}
+
+@media (min-width:260px) and (max-width: 480px) {
+  .contact {
+    padding: 20px;
+    gap: 0;
+  }
+
+  .formItem {
+    gap: 5px;
+  }
+
+  .contactFormSection,
+  .contactInfoSection {
+    flex: 1 1 100%;
+    /* Stack on smaller screens */
+    align-items: center;
+  }
+
+  .contactFormSection h2 {
+    color: #222;
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .formButton {
+    padding: 10px;
+  }
+
+  .infoItem h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .infoItem p {
+    font-size: 12px;
+    /* Smaller text for info section */
+  }
+
+
+  .infoItem.phone,
+  .infoItem.email,
+  .infoItem.business-hours {
+    display: none;
+  }
+}

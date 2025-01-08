@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.64 79.11">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .5em;
+      }
+
+      .cls-2 {
+        letter-spacing: .55em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-4 {
+        letter-spacing: .28em;
+      }
+
+      .cls-5 {
+        fill: #8dc640;
+        font-size: 7.76px;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        font-family: gawal, gawal;
+      }
+
+      .cls-8 {
+        letter-spacing: .6em;
+      }
+
+      .cls-6 {
+        fill: #0d1f40;
+      }
+
+      .cls-6, .cls-7 {
+        font-size: 40.16px;
+      }
+
+      .cls-9 {
+        letter-spacing: .58em;
+      }
+
+      .cls-10 {
+        letter-spacing: .47em;
+      }
+
+      .cls-11 {
+        letter-spacing: .57em;
+      }
+
+      .cls-12 {
+        letter-spacing: .48em;
+      }
+
+      .cls-13 {
+        letter-spacing: .6em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.22em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-7, .cls-15 {
+        fill: #0186ff;
+      }
+
+      .cls-16 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-17 {
+        letter-spacing: .58em;
+      }
+    </style>
+  </defs>
+  <text class="cls-5" transform="translate(12.78 77.36)"><tspan class="cls-12" x="0" y="0">t</tspan><tspan class="cls-11" x="11.48" y="0">o</tspan><tspan class="cls-8" x="24.02" y="0">m</tspan><tspan class="cls-17" x="36.41" y="0">o</tspan><tspan class="cls-2" x="49.07" y="0">r</tspan><tspan class="cls-9" x="60.51" y="0">o</tspan><tspan class="cls-1" x="73.17" y="0">r</tspan><tspan class="cls-8" x="84.21" y="0">w begins </tspan><tspan class="cls-12" x="182.97" y="0">t</tspan><tspan class="cls-8" x="194.45" y="0">o</tspan><tspan class="cls-10" x="207.25" y="0">d</tspan><tspan class="cls-4" x="218.21" y="0">a</tspan><tspan class="cls-13" x="229.18" y="0">y</tspan></text>
+  <g>
+    <text class="cls-6" transform="translate(77.31 32.87)"><tspan class="cls-3" x="0" y="0">A</tspan><tspan class="cls-16" x="40.04" y="0">fri</tspan><tspan class="cls-14" x="113.68" y="0">d</tspan><tspan class="cls-16" x="143" y="0">a</tspan></text>
+    <text class="cls-7" transform="translate(77.31 61.66)"><tspan x="0" y="0">Tech</tspan></text>
+    <path class="cls-15" d="M7.09,63.76c-1.49,0-2.98-.46-4.24-1.4-2.77-2.08-3.64-5.82-2.07-8.91L23.99,8.49c1.57-3.04,4.41-5.09,7.8-5.62,3.39-.53,6.72.55,9.14,2.97l4.41,4.4-5.36,5.38-4.41-4.4c-.69-.69-1.64-1-2.61-.85-.96.15-1.78.74-2.22,1.6L9.01,54.06,53.91,9.16c1.95-1.95,4.53-3.02,7.29-3.02h.02c2.76,0,5.35,1.08,7.29,3.04,3.99,4.02,3.98,10.55-.03,14.55l-6.75,6.74,8.81,8.81c4.9,4.9,4.9,12.87,0,17.76-2.37,2.37-5.53,3.68-8.88,3.68s-6.51-1.31-8.88-3.68l-14.67-14.67,5.37-5.37,14.67,14.67c.94.94,2.19,1.45,3.51,1.45s2.57-.52,3.51-1.45c1.94-1.94,1.94-5.09,0-7.02l-14.19-14.18,12.13-12.11c1.05-1.05,1.06-2.77,0-3.83-.51-.51-1.19-.8-1.92-.8h0c-.72,0-1.4.28-1.92.79L12.12,61.69c-1.37,1.37-3.19,2.07-5.03,2.07Z"/>
+  </g>
+</svg>
