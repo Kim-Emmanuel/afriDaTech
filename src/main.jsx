@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
 import About from './components/about/About';
 import Layout from './components/layout/Layout';
-import Pointer from './components/custom-pointer/CustomPointer';
+// import Pointer from './components/custom-pointer/CustomPointer';
 import './index.css';
 
 const Main = () => {
   return (
     <Router>
-      <Pointer />
+      {/* <Pointer /> */}
       <Layout>
         <Routes>
           <Route path="/" element={<App />} />
