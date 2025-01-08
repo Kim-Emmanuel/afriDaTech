@@ -1,5 +1,5 @@
 /* CustomPointer.css */
-.custom-pointer {
+.custom-mouse {
   width: 10px;
   height: 10px;
   background-color: #0186ff;
@@ -13,7 +13,7 @@
   z-index: 101;
 }
 
-.custom-pointer.pointer-active {
+.custom-mouse.pointer-active {
   width: 12px;
   height: 12px;
   background-color: #8dc640;
