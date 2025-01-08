@@ -41,7 +41,7 @@ const CustomPointer = () => {
     <div className="pointer-container">
       <motion.div
         ref={pointerRef}
-        className={`custom-mouse ${isPointerActive ? 'pointer-active' : ''}`}
+        className={`custom-pointer ${isPointerActive ? 'pointer-active' : ''}`}
         id="custom-pointer"
         animate={{ x: position.x, y: position.y }}
         transition={{ type: 'spring', stiffness: 500, damping: 20 }}
